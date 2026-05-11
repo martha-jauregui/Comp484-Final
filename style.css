@@ -1,0 +1,122 @@
+/* Layout Configuration */
+html, body, #container { 
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden; 
+}
+
+#container { 
+    display: flex; 
+    height: 100vh; 
+}
+
+/* Sidebar: Using Flexbox to anchor score/log to the bottom */
+#sidebar { 
+    width: 300px; 
+    padding: 20px; 
+    background: #e9e4d4; 
+    display: flex; 
+    flex-direction: column; 
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+}
+
+#map { 
+    flex-grow: 1; 
+    height: 100%; 
+}
+
+/* Question Prompt Styling */
+.prompt-box {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Timer Styling */
+#timer-box {
+    background: #222;
+    color: #00ff00;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: monospace;
+}
+
+.timer-label {
+    font-size: 0.7em;
+    color: #aaa;
+}
+
+#timer {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Anchored Bottom Elements */
+.spacer { 
+    flex-grow: 1; 
+}
+
+#running-total {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-top: 2px solid #333;
+    padding-top: 10px;
+}
+
+/* Live Log (Chaparral Hall: Correct) Styling */
+#score-log p {
+    margin: 5px 0;
+    font-family: serif;
+    font-size: 1.1em;
+}
+
+.correct-text { 
+    color: #008000; 
+    font-style: italic; 
+    font-weight: bold; 
+}
+
+.incorrect-text { 
+    color: #d90000; 
+    font-style: italic; 
+    font-weight: bold; 
+}
+
+#top-runs h3 {
+    font-family: serif;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #c4bfaf;
+    padding-bottom: 5px;
+}
+
+#top-runs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#top-runs li {
+    font-family: serif; 
+    font-size: 1.2em;   
+    font-weight: bold;  
+    margin-bottom: 8px;
+    color: #333;
+    /* This creates a clean look without the date */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+#retry-btn {
+    display: none;
+    margin-top: 10px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSUN Map Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+        <div id="sidebar">
+            <h2>CSUN Map Quiz</h2>
+        
+            <p>Please double click on the map the location of:</p>
+        
+            <div id="quiz-box">
+                <div class="prompt-box" id="prompt-text">Loading...</div>
+            </div>
+        
+            <div id="timer-box">
+                <span class="timer-label">GAME TIME</span><br>
+                <span id="timer">0s</span>
+            </div>
+
+
+           
+
+            <div id="running-total">
+                Score: 0/0
+            </div>
+          
+
+            <div id="score-log"></div>
+
+            <div id="results"></div>
+                <div id="high-score-display"></div>
+                <button id="retry-btn" onclick="location.reload()">Try Again</button>
+        
+          <div class="spacer"></div>
+
+            <div id="past-attempts"></div>
+        </div>
+        
+        <div id="map"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCium-2DmjUkkkiFLNB2eSBg8paw8LVNJg&libraries=geometry&callback=initMap" async defer></script>
+
+</body>
+</html>
