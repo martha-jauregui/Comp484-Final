@@ -1,4 +1,4 @@
-// Your custom constants for consistent UI
+// ColorScheme constants
 const ColorScheme = {
     CORRECT: "#008000", // The green from your log
     WRONG: "#d90000",   // The red from your log
@@ -12,7 +12,7 @@ let timerInterval;
 let timerStarted = false; 
 
 const locations = [
-    { name: "Chaparral Hall", lat: 34.2383, lng: -118.5269, radius: 40 }, 
+    { name: "Chaparral Hall", lat: 34.2383, lng: -118.5269, radius: 40 }, //circle class in action 
     { name: "CSUN Campus Store", lat: 34.2373, lng: -118.5283, radius: 50},
     { name: "Bayramian Hall", lat: 34.2403, lng: -118.5310, radius: 45 },
     { name: "Jacaranda Hall", lat: 34.2415, lng: -118.5286, radius: 60 }, 
@@ -75,7 +75,7 @@ function checkAnswer(clickedLatLng) {
         map: map,
         center: targetLatLng,
         radius: target.radius,
-        fillColor: isCorrect ? ColorScheme.CORRECT : ColorScheme.WRONG,
+        fillColor: isCorrect ? ColorScheme.CORRECT : ColorScheme.WRONG, //colorscheme constants in action
         strokeColor: isCorrect ? ColorScheme.CORRECT : ColorScheme.WRONG,
         fillOpacity: 0.35,
         strokeWeight: 1

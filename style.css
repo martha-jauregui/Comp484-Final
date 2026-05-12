@@ -11,7 +11,7 @@ html, body, #container {
     height: 100vh; 
 }
 
-/* Sidebar: Using Flexbox to anchor score/log to the bottom */
+/* Sidebar: Using Flexbox to anchor content to bottom */
 #sidebar { 
     width: 300px; 
     padding: 20px; 
@@ -29,13 +29,14 @@ html, body, #container {
 
 /* Question Prompt Styling */
 .prompt-box {
-    background: #007bff;
+    background: #2b78e4;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border-radius: 4px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 10px;
+    font-family: sans-serif;
 }
 
 /* Timer Styling */
@@ -59,64 +60,66 @@ html, body, #container {
     font-weight: bold;
 }
 
-/* Anchored Bottom Elements */
+/* Spacer pushes everything below it to the bottom of the sidebar */
 .spacer { 
     flex-grow: 1; 
 }
 
+/* Current Score Line */
 #running-total {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 5px;
     border-top: 2px solid #333;
     padding-top: 10px;
+    font-family: serif;
 }
 
-/* Live Log (Chaparral Hall: Correct) Styling */
+/* Live Log (Correct/Incorrect) underneath Score */
 #score-log p {
     margin: 5px 0;
     font-family: serif;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-.correct-text { 
-    color: #008000; 
-    font-style: italic; 
-    font-weight: bold; 
+.correct-text { color: #008000; font-style: italic; }
+.incorrect-text { color: #d90000; font-style: italic; }
+
+/* TOP 3 RUNS SECTION */
+#past-attempts {
+    margin-top: 20px;
 }
 
-.incorrect-text { 
-    color: #d90000; 
-    font-style: italic; 
-    font-weight: bold; 
-}
-
-#top-runs h3 {
+#past-attempts h3 {
     font-family: serif;
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #c4bfaf;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #333;
     padding-bottom: 5px;
 }
 
-#top-runs ul {
+#past-attempts ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#top-runs li {
+#past-attempts li {
     font-family: serif; 
-    font-size: 1.2em;   
+    font-size: 1.3em;   
     font-weight: bold;  
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     color: #333;
-    /* This creates a clean look without the date */
-    border-bottom: 1px solid #eee;
-    padding-bottom: 4px;
+    border-bottom: 1px solid #c4bfaf;
+    padding: 8px 0;
 }
 
 #retry-btn {
     display: none;
     margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
 }

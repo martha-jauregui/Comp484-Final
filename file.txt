@@ -1,0 +1,20 @@
+1. Circle Class
+The google.maps.Circle class is a built-in tool in the Google Maps API used to draw a circular overlay on the map. 
+It requires a center (latitude and longitude) and a radius (in meters).
+
+How I used it: When a user double-clicks the map, we used the Circle class to draw a ring around the correct location. 
+This shows the user how close (or far) they were from the actual building.
+
+The Circle class visually represents the "correct area" of the building.
+
+2. ColorScheme Constatns
+
+Instead of typing "green" or "#008000" every time you check an answer, you use a constant. 
+This makes your code much easier to maintain—if you decide you want a different shade of green later, you only change it in one place.
+
+How I used it:
+
+Correct Answers: I used a constant (like CORRECT_COLOR) to set the color of the text in the #score-log and perhaps to draw a green circle on the map where the building actually is.
+
+Incorrect Answers: I used a different constant (like ERROR_COLOR) for the red "Incorrect" text and any red markers on the map.
+
